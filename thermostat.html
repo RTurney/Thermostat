@@ -24,6 +24,9 @@
     <button onclick="tempReset()">
       Reset
     </button>
+    <button onClick="turnOnPowerSavingMode()">
+      Turn on Power Saving Mode
+    </button>
 
     <script>
       const tempIncrease = () => {
@@ -39,6 +42,10 @@
       const tempReset = () => {
         thermostat.reset();
         document.getElementById("temp").innerHTML = thermostat.temperature();
+      }
+      
+      const turnOnPowerSavingMode = () => {
+        thermostat.turnOnPowerSavingMode()
       }
 
 
