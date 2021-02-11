@@ -16,6 +16,13 @@ describe("Thermostat", () => {
       }
       expect(thermostat.temperature()).toEqual(10);
     });
+    it("will not go higher than 25 degrees when power saving mode is on", () => {
+      thermostat.turnOnPowerSavingMode();
+      for (let i = 0; i < 6; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.temperature()).toEqual(25);
+    });
   });
 
   describe(".up", () => {
