@@ -60,4 +60,11 @@ describe("Thermostat", () => {
       expect(thermostat.isPowerSaveMode()).toBe(true);
     });
   });
+  describe(".reset", () => {
+    it("resets the temperature of the thermostat", () => {
+      thermostat.up();
+      thermostat.reset();
+      expect(thermostat.temperature()).toEqual(20);
+    })
+  })
 });
