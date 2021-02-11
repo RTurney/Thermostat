@@ -9,8 +9,14 @@ class Thermostat {
     return this.temp;
   }
 
+  maximumTemperature() {
+    return this.isPowerSaveMode() ? 25 : 32;
+  }
+
   up() {
-    this.temp++;
+    if (this.temp < this.maximumTemperature()) {
+      this.temp++;
+    }
   }
 
   down() {
@@ -22,7 +28,7 @@ class Thermostat {
   }
 
   turnOffPowerSavingMode() {
-    this.powerSavingSwitch = false
+    this.powerSavingSwitch = false;
   }
 
   turnOnPowerSavingMode() {
