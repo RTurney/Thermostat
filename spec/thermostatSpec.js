@@ -41,5 +41,9 @@ describe('Thermostat', () => {
     it('is on by default', () => {
       expect(thermostat.isPowerSaveMode()).toBe(true)
     });
+    it("can be turned off", () => {
+      thermostat.turnOffPowerSavingMode()
+      expect(thermostat.isPowerSaveMode()).toBe(false)
+    }) 
   });
 });
