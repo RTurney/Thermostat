@@ -9,7 +9,23 @@
       thermostat = new Thermostat()
     </script>
 
-    <h1>The current temperature is: <script>document.write(thermostat.temperature())</script>
+
+    <h1>
+      The current temperature is:
     </h1>
+    <p id='temp'>
+    <script>document.write(thermostat.temperature())</script>
+    </p>
+
+    <button type='button' onclick="tempIncrease()">Temperature up</button>
+    <button></button>
+
+    <script>
+      function tempIncrease() {
+        thermostat.up()
+        document.getElementById("temp").innerHTML = thermostat.temperature();
+      }
+  </script>
+
   </body>
 </html>
