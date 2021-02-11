@@ -21,6 +21,9 @@
     <button onclick="tempDecrease()">
       Temperature Down
     </button>
+    <button onclick="tempReset()">
+      Reset
+    </button>
 
     <script>
       const tempIncrease = () => {
@@ -32,6 +35,14 @@
         thermostat.down();
         document.getElementById("temp").innerHTML = thermostat.temperature();
       }
+      
+      const tempReset = () => {
+        thermostat.reset();
+        document.getElementById("temp").innerHTML = thermostat.temperature();
+      }
+
+
+
   </script>
 
   </body>
