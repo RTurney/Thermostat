@@ -39,7 +39,7 @@ describe('Thermostat', () => {
   describe('.powerSaveMode', () => {
 
     it('is on by default', () => {
-      expect(thermostat.powerSaveMode).toBe(true)
+      expect(thermostat.isPowerSaveMode()).toBe(true)
     });
   });
 });
