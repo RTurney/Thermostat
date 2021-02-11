@@ -11,6 +11,13 @@ describe('Thermostat', () => {
     it('starts at 20 degrees', () => {
       expect(thermostat.temperature()).toEqual(20);
     });
+
+    it('will not go lower than 10 degrees', () => {
+      for(let i = 0; i < 11; i ++){
+        thermostat.down();
+      }
+      expect(thermostat.temperature()).toEqual(10);
+    });
   });
 
   describe('.up', () => {
