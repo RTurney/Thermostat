@@ -35,4 +35,11 @@ describe('Thermostat', () => {
       expect(thermostat.temperature()).toEqual(19);
     });
   });
+
+  describe('.powerSaveMode', () => {
+
+    it('is on by default', () => {
+      expect(thermostat.powerSaveMode).toBe(true)
+    });
+  });
 });

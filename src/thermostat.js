@@ -9,5 +9,4 @@ class Thermostat {
 
   up() { this.temp ++ }
 
-  down() { if(this.temp > this.MINIMUM) this.temp -- }
-}
+  down() { if(this.temp > this.MINIMUM) this.temp -- }}
